@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import StaffCard from "../components/StaffCard/StaffCard";
-import SearchIcon from "../search.svg"
-import staffRecords from "../Staff/staffRecords.json";
+import StaffCard from "../../components/StaffCard/StaffCard";
+import staffRecords from "../../Staff/staffRecords.json";
 
 const StaffPage = () => {
     const [searchedStaff, setSearchedStaff] = useState("");
@@ -36,10 +35,7 @@ const StaffPage = () => {
                 placeholder="Search staff by first name"
                 />
                 <img
-                src={SearchIcon}
-                alt="search"
-                onClick={() => searchStaff(searchedStaff)}
-                style={{width:"20px"}}
+                className="icon" src={`/images/search-icon.png`} alt="email-icon" onClick={() => searchStaff(searchedStaff)}
                 />
             </div>
 

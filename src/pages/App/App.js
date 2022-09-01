@@ -1,5 +1,5 @@
 import "./App.css";
-import StaffPage from "../StaffPage";
+import StaffPage from "../Staff/StaffPage";
 
 function App() {
   return (

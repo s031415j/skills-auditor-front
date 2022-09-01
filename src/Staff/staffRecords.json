@@ -1,59 +1,62 @@
 [
-        {
-            "id": "0001",
-            "firstname": "Kate", 
-            "surname": "Shields", 
-            "username": "katherineshieldss", 
-            "password": "password",
-            "jobRole": "Software Engineer",
-            "manager": "David Speers",
-            "houseNumber": "10", 
-            "street": "Example Lane",
-            "postcode": "BT7 3BT",
-            "skills": [
-                {
-                    "id": "1",
-                    "name": "Java",
-                    "category": "Programming"
-                }
-            ]
-        }, 
-        {
-            "id": "0002",
-            "firstname": "Soph", 
-            "surname": "Shells", 
-            "username": "soph.shells", 
-            "password": "password",
-            "jobRole": "Lawer",
-            "manager": "Hannah Maguire",
-            "houseNumber": "94", 
-            "street": "CandyLand",
-            "postcode": "BT7 1DR",
-            "skills": [
-                {
-                    "id": "2",
-                    "name": "React",
-                    "category": "Programming"
-                }
-            ]
-        },
-        {
-            "id": "0003",
-            "firstname": "Kellie", 
-            "surname": "Arbuthnot", 
-            "username": "kell", 
-            "password": "password",
-            "jobRole": "E-Learning Person",
-            "manager": "Debbie Major",
-            "houseNumber": "31", 
-            "street": "Boss Avenue",
-            "postcode": "BT7 1PT",
-            "skills": [
-                {
-                    "id": "3",
-                    "name": "CPR",
-                    "category": "First Aid"
-                }
-            ]
-        }
+  {
+    "id": "0001",
+    "firstname": "Katie",
+    "surname": "Shields",
+    "email": "katie.shields@example.com",
+    "phoneNumber": "07963852741",
+    "password": "password",
+    "jobRole": "Software Engineer",
+    "manager": "David Speers",
+    "houseNumber": "10",
+    "street": "Example Lane",
+    "postcode": "BT7 3BT",
+    "skills": [
+      {
+        "id": "1",
+        "name": "Java",
+        "category": "Programming"
+      }
+    ]
+  },
+  {
+    "id": "0002",
+    "firstname": "Sophie",
+    "surname": "Shells",
+    "email": "soph.shells@example.com",
+    "phoneNumber": "0776485133",
+    "password": "password",
+    "jobRole": "Lawer",
+    "manager": "Hannah Maguire",
+    "houseNumber": "94",
+    "street": "CandyLand",
+    "postcode": "BT7 1DR",
+    "skills": [
+      {
+        "id": "2",
+        "name": "React",
+        "category": "Programming"
+      }
+    ]
+  },
+  {
+    "id": "0003",
+    "firstname": "Kellie",
+    "surname": "Arbuthnot",
+    "email": "kell@example.com",
+    "phoneNumber": "07852134679",
+    "password": "password",
+    "jobRole": "E-Learning Person",
+    "manager": "Debbie Major",
+    "houseNumber": "31",
+    "street": "Boss Avenue",
+    "postcode": "BT7 1PT",
+    "skills": [
+      {
+        "id": "3",
+        "name": "CPR",
+        "category": "First Aid"
+      }
+    ]
+  }
 ]
