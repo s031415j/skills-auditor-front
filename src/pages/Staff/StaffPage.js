@@ -26,8 +26,6 @@ const StaffPage = () => {
 
     return (
         <div className="staffPage">
-            <h1>Directory</h1>
-
             <div className="search">
                 <input
                 value={searchedStaff}
