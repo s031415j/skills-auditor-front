@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import StaffCard from "../../components/StaffCard/StaffCard";
 import staffRecords from "../../Staff/staffRecords.json";
+import './StaffPage.css';
 
 const StaffPage = () => {
     const [searchedStaff, setSearchedStaff] = useState("");
@@ -38,7 +39,7 @@ const StaffPage = () => {
             </div>
 
             {staffList?.length > 0 ? (
-                <div className="container">
+                <div className="staff-card-container">
                     {staffList.map((staffMember) => (
                         <StaffCard staff={staffMember}/>
                     ))}

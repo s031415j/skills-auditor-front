@@ -28,7 +28,7 @@ input{
 }
 .staff-card{
     width: 320px;
-    margin-bottom: 100px;
+    margin: 20px 10px;
     border: 2px solid #D3D3D3;
     border-radius: 10px;
     align-items: center;
@@ -36,7 +36,7 @@ input{
     position: relative;
 }
 .top-section{
-    padding: 24px 24px 24px 24px;
+    padding: 24px;
     border-bottom: 2px #D3D3D3 solid; 
     vertical-align: middle;
 }
@@ -49,12 +49,13 @@ input{
 .staff-info{
     text-align: left;
     display:table-cell;
-    padding: 12px 0 0 20px;
+    padding-left: 15px;
     height: 68px;
 }
 .bottom-section{
     padding: 24px;
     text-align: left;
+    vertical-align: middle;
 }
 .email-section{
     padding: 0 0 10px 0;

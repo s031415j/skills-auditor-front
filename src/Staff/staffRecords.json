@@ -10,14 +10,7 @@
     "manager": "David Speers",
     "houseNumber": "10",
     "street": "Example Lane",
-    "postcode": "BT7 3BT",
-    "skills": [
-      {
-        "id": "1",
-        "name": "Java",
-        "category": "Programming"
-      }
-    ]
+    "postcode": "BT7 3BT"
   },
   {
     "id": "0002",
@@ -30,14 +23,7 @@
     "manager": "Hannah Maguire",
     "houseNumber": "94",
     "street": "CandyLand",
-    "postcode": "BT7 1DR",
-    "skills": [
-      {
-        "id": "2",
-        "name": "React",
-        "category": "Programming"
-      }
-    ]
+    "postcode": "BT7 1DR"
   },
   {
     "id": "0003",
@@ -50,13 +36,45 @@
     "manager": "Debbie Major",
     "houseNumber": "31",
     "street": "Boss Avenue",
-    "postcode": "BT7 1PT",
-    "skills": [
-      {
-        "id": "3",
-        "name": "CPR",
-        "category": "First Aid"
-      }
-    ]
+    "postcode": "BT7 1PT"
+  },
+  {
+    "id": "0004",
+    "firstname": "John",
+    "surname": "Lagan",
+    "email": "scarlett@example.com",
+    "phoneNumber": "07745921030",
+    "password": "password",
+    "jobRole": "Apprentice",
+    "manager": "Hannah Maguire",
+    "houseNumber": "58",
+    "street": "Anchor Row",
+    "postcode": "BT7 1LD"
+  }, 
+   {
+    "id": "0005",
+    "firstname": "Scarlett",
+    "surname": "Hunt",
+    "email": "herohunt@example.com",
+    "phoneNumber": "07756325418",
+    "password": "password",
+    "jobRole": "Vet",
+    "manager": "Debbie Major",
+    "houseNumber": "17",
+    "street": "Garden Street",
+    "postcode": "BT7 1TR"
+  },
+  {
+    "id": "0006",
+    "firstname": "Brendy",
+    "surname": "Muldoon",
+    "email": "brendy@example.com",
+    "phoneNumber": "07360589014",
+    "password": "password",
+    "jobRole": "Software Engineer",
+    "manager": "David Speers",
+    "houseNumber": "36",
+    "street": "Delta Avenue",
+    "postcode": "BT7 1FP"
   }
 ]
