@@ -2,5 +2,17 @@
     width:100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
 }
+
+.staffPage{
+    margin: 0 100px;
+}
+
+.search{
+    margin-bottom: 20px;
+}
+
+#searchBar{
+    margin-right: 10px;
+}
+

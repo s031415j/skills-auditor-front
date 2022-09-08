@@ -28,13 +28,13 @@ const StaffPage = () => {
     return (
         <div className="staffPage">
             <div className="search">
-                <input
+                <input id="searchBar"
                 value={searchedStaff}
                 onChange={(e) => setSearchedStaff(e.target.value)}
                 placeholder="Search staff by first name"
                 />
                 <img
-                className="icon" src={`/images/search-icon.png`} alt="email-icon" onClick={() => searchStaff(searchedStaff)}
+                className="search-icon icon" src={`/images/search-icon.png`} alt="email-icon" onClick={() => searchStaff(searchedStaff)}
                 />
             </div>
 
