@@ -5,12 +5,7 @@
     "surname": "Shields",
     "email": "katie.shields@example.com",
     "phoneNumber": "07963852741",
-    "password": "password",
-    "jobRole": "Software Engineer",
-    "manager": "David Speers",
-    "houseNumber": "10",
-    "street": "Example Lane",
-    "postcode": "BT7 3BT"
+    "jobRole": "Software Engineer"
   },
   {
     "id": "0002",
@@ -18,12 +13,7 @@
     "surname": "Shells",
     "email": "soph.shells@example.com",
     "phoneNumber": "0776485133",
-    "password": "password",
-    "jobRole": "Lawer",
-    "manager": "Hannah Maguire",
-    "houseNumber": "94",
-    "street": "CandyLand",
-    "postcode": "BT7 1DR"
+    "jobRole": "Lawer"
   },
   {
     "id": "0003",
@@ -31,12 +21,7 @@
     "surname": "Arbuthnot",
     "email": "kell@example.com",
     "phoneNumber": "07852134679",
-    "password": "password",
-    "jobRole": "E-Learning Person",
-    "manager": "Debbie Major",
-    "houseNumber": "31",
-    "street": "Boss Avenue",
-    "postcode": "BT7 1PT"
+    "jobRole": "E-Learning Person"
   },
   {
     "id": "0004",
@@ -44,12 +29,7 @@
     "surname": "Lagan",
     "email": "jlagan@example.com",
     "phoneNumber": "07745921030",
-    "password": "password",
-    "jobRole": "Apprentice",
-    "manager": "Hannah Maguire",
-    "houseNumber": "58",
-    "street": "Anchor Row",
-    "postcode": "BT7 1LD"
+    "jobRole": "Apprentice"
   }, 
    {
     "id": "0005",
@@ -57,12 +37,7 @@
     "surname": "Hunt",
     "email": "scarletthunt@example.com",
     "phoneNumber": "07756325418",
-    "password": "password",
-    "jobRole": "Vet",
-    "manager": "Debbie Major",
-    "houseNumber": "17",
-    "street": "Garden Street",
-    "postcode": "BT7 1TR"
+    "jobRole": "Vet"
   },
   {
     "id": "0006",
@@ -70,11 +45,6 @@
     "surname": "Muldoon",
     "email": "brendy@example.com",
     "phoneNumber": "07360589014",
-    "password": "password",
-    "jobRole": "Software Engineer",
-    "manager": "David Speers",
-    "houseNumber": "36",
-    "street": "Delta Avenue",
-    "postcode": "BT7 1FP"
+    "jobRole": "Software Engineer"
   }
 ]

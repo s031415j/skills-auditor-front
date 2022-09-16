@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StaffCard from "../../components/StaffCard/StaffCard";
+import AddNewStaff from "../../components/AddStaffPage/AddStaffPage.js";
 import staffRecords from "../../Staff/staffRecords.json";
 import './StaffPage.css';
 
@@ -7,9 +8,7 @@ const StaffPage = () => {
     const [searchedStaff, setSearchedStaff] = useState("");
     const [staffList, setStaff] = useState(staffRecords);
 
-    useEffect(() => {
-        
-    }, [staffList])
+    useEffect(() => {}, [staffList])
 
     const searchStaff = (firstname) => {
         if(!firstname) {
@@ -17,13 +16,13 @@ const StaffPage = () => {
             return;
         } 
 
-        //
         const foundStaff = staffRecords.filter(record => record.firstname === firstname);
         console.log("Found Staff:", foundStaff);
         console.log("Firstname: ", firstname);
 
         setStaff(foundStaff);
     };
+
 
     return (
         <div className="staffPage">
@@ -37,6 +36,10 @@ const StaffPage = () => {
                 className="search-icon icon" src={`/images/search-icon.png`} alt="email-icon" onClick={() => searchStaff(searchedStaff)}
                 />
             </div>
+
+        <div className="addStaff">
+            <AddNewStaff/>
+        </div>
 
             {staffList?.length > 0 ? (
                 <div className="staff-card-container">
