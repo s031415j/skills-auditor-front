@@ -1,0 +1,19 @@
+.remove-staff-page{
+    margin-left: 200px;
+}
+
+.remove{
+    margin-bottom: 20px;
+}
+
+#remove-input{
+    margin-right: 10px;
+    border: 2px solid #D3D3D3;
+    border-radius: 5px;
+    height: 20px;
+    padding-left: 5px;
+}
+
+.minus-icon{
+     margin-bottom: 3px;
+}

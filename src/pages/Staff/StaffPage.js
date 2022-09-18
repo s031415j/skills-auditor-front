@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import StaffCard from "../../components/StaffCard/StaffCard";
-import AddNewStaff from "../../components/AddStaffPage/AddStaffPage.js";
 import staffRecords from "../../Staff/staffRecords.json";
 import './StaffPage.css';
 
@@ -25,9 +24,9 @@ const StaffPage = () => {
 
 
     return (
-        <div className="staffPage">
+        <div className="staff-page">
             <div className="search">
-                <input id="searchBar"
+                <input id="search-bar"
                 value={searchedStaff}
                 onChange={(e) => setSearchedStaff(e.target.value)}
                 placeholder="Search staff by first name"
@@ -36,10 +35,6 @@ const StaffPage = () => {
                 className="search-icon icon" src={`/images/search-icon.png`} alt="email-icon" onClick={() => searchStaff(searchedStaff)}
                 />
             </div>
-
-        <div className="addStaff">
-            <AddNewStaff/>
-        </div>
 
             {staffList?.length > 0 ? (
                 <div className="staff-card-container">

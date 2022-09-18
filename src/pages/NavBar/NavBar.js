@@ -12,23 +12,16 @@ const NavBar = () => {
                 <li>
                   <a href='/directory' className='items'>Directory</a>  
                 </li>
-                
+                <li>
+                  <a href='/addStaff' className='items'>Add Staff</a>  
+                </li>
+                <li>
+                  <a href='/removeStaff' className='items'>Remove Staff</a>  
+                </li>
             </ul>
         </nav>
     )
 
 }
-
-// function CustomLink({href, children, ...props}) {
-//     const path = window.location.pathname
-
-//     return (
-//         <li className={path === to ? "active" : ""}>
-//             <Link to={to} {...props}>
-//                 {children}
-//             </Link>
-//         </li>
-//     )
-// }
 
 export default NavBar;

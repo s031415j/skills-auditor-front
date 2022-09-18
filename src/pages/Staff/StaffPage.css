@@ -4,7 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.staffPage{
+.staff-page{
     margin-left: 200px;
 }
 
@@ -12,7 +12,15 @@
     margin-bottom: 20px;
 }
 
-#searchBar{
+#search-bar{
     margin-right: 10px;
+    border: 2px solid #D3D3D3;
+    border-radius: 5px;
+    height: 20px;
+    padding-left: 5px;
 }
 
+.search-icon{
+    margin-bottom: 3px;
+    padding: 0;
+}

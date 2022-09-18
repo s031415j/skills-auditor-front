@@ -23,12 +23,12 @@ const StaffCard = ({
       <div className="bottom-section">
         <div className="staff-contact-info">
           <div className="email-section">
-            <img className="icon"src={`/images/email-icon.png`} alt="email-icon"/>
-            <input type="email" value={email}className="email-input" placeholder="Email" onChange=""/>
+            <img className="card-icon icon"src={`/images/email-icon.png`} alt="email-icon"/>
+            <p>{email}</p>
           </div>
           <div className="phone-section">
-           <img className="icon"src={`/images/phone-icon.png`} alt="phone-icon"/> 
-           <input type="phone" value={phoneNumber} name="phone-input" placeholder="Phone number" onChange=""/>
+           <img className="card-icon icon"src={`/images/phone-icon.png`} alt="phone-icon"/> 
+           <p className="phone-info">{phoneNumber}</p>
           </div>
         </div>
       </div>
