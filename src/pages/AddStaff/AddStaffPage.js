@@ -6,16 +6,13 @@ import "./AddStaffPage.css";
 
 const AddStaffPage = () => {
 
-    const [staffList, setStaff] = useState(staffRecords);
+    const [staffList] = useState(staffRecords);
 
     useEffect(() => {}, [staffList])
 
     return (
-        
         <div className="add-staff-page">
-            <div>
                 <AddStaffFields/>
-            </div>
 
             {staffList?.length > 0 ? (
             <div className="staff-card-container">
