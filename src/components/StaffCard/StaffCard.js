@@ -3,16 +3,15 @@ import "./StaffCard.css";
 
 const StaffCard = ({
   staff: { id, firstname, surname, jobRole, email, phoneNumber},
-
-
 }) => {
+  
   return (
     <div className="staff-card" key={id}>
       <div className="top-section">
         <div className="profile-pic">
-          <img className="profile-pic"
-          src={`/images/staff-${id}.jpg`}
-          alt={id}/>
+        <img className="profile-pic"
+        src={`/images/staff-${id}.jpg`}
+        alt={id}/>
         </div>
         <div className="staff-info">
           <h2 className="staff-name">{firstname} {surname}</h2>

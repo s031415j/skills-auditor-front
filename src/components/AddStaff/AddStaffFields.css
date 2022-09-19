@@ -30,3 +30,9 @@
 .input-container{
     height:30px;
 }
+.profile-pic{
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    float: left;
+}
