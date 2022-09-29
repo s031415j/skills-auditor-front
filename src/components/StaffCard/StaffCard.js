@@ -1,35 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import "./StaffCard.css";
+import EditableField from "../EditableField/EditableField";
 
-const StaffCard = ({
-  staff: { id, firstname, surname, jobRole, email, phoneNumber},
-}) => {
-  
+const StaffCard = (props) => {console.log(props)
+  const [isEditing, setIsEditing] = useState(false);
+
+  const [staffToEdit, setStaffToEdit] = useState();
+
+  const onEdit = () => {
+    setIsEditing(true);
+    setStaffToEdit(props.staff);
+  };
+
+  const onChange = (fieldToUpdate, newValue) => {
+    setStaffToEdit({ ...staffToEdit, [fieldToUpdate]: newValue.target.value });
+  };
+
+  const onSubmit = () => {
+
+    props.updateStaff(staffToEdit);
+    setIsEditing(false);
+  };
+
   return (
-    <div className="staff-card" key={id}>
+    <div className="staff-card" key={props.staff.id}>
       <div className="top-section">
+        <div className="edit-container">
+          <img
+            className="edit-icon icon"
+            src={`/images/edit-icon.png`}
+            alt="edit-icon"
+            onClick={onEdit}
+          />
+        </div>
         <div className="profile-pic">
-        <img className="profile-pic"
-        src={`/images/staff-${id}.jpg`}
-        alt={id}/>
+          <img
+            className="profile-pic"
+            src={`/images/default-profile.png`}
+            alt={props.staff.id}
+          />
         </div>
         <div className="staff-info">
-          <h2 className="staff-name">{firstname} {surname}</h2>
-          <h3>{jobRole}</h3>
+          <EditableField
+            className="staff-name"
+            value={`${props.staff.firstname}`}
+            isEditing={isEditing}
+            onChange={(value) => onChange("firstname", value)}
+          />
+          <EditableField className="staff-name" value={`${props.staff.surname}`} />
+          <EditableField className="staff-name" value={`${props.staff.jobRole}`} />
         </div>
       </div>
-      
+
       <div className="bottom-section">
         <div className="staff-contact-info">
           <div className="email-section">
-            <img className="card-icon icon"src={`/images/email-icon.png`} alt="email-icon"/>
-            <p>{email}</p>
+            <img
+              className="card-icon icon"
+              src={`/images/email-icon.png`}
+              alt="email-icon"
+            />
+            <EditableField className="staff-name" value={`${props.staff.email}`} />
           </div>
           <div className="phone-section">
-           <img className="card-icon icon"src={`/images/phone-icon.png`} alt="phone-icon"/> 
-           <p className="phone-info">{phoneNumber}</p>
+            <img
+              className="card-icon icon"
+              src={`/images/phone-icon.png`}
+              alt="phone-icon"
+            />
+            <EditableField className="staff-name" value={`${props.staff.phoneNumber}`} />
           </div>
         </div>
+        <button onClick={onSubmit}>Save</button>
       </div>
     </div>
   );

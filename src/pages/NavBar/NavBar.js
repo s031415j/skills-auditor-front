@@ -7,9 +7,6 @@ const NavBar = () => {
             <img className="logo"src={`/images/logo.png`} alt="logo"/>
             <ul>
                 <li>
-                  <a href='/home'className='items'>Home</a>  
-                </li>
-                <li>
                   <a href='/directory' className='items'>Directory</a>  
                 </li>
                 <li>

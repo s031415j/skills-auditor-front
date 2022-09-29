@@ -1,7 +1,6 @@
 import "./App.css";
 import StaffPage from "../Staff/StaffPage";
 import NavBar from "../NavBar/NavBar";
-import HomePage from "../Home/HomePage";
 import AddStaff from "../AddStaff/AddStaffPage";
 import RemoveStaff from "../RemoveStaff/RemoveStaffPage";
 import { Routes, Route } from "react-router-dom";
@@ -32,10 +31,6 @@ function App() {
 			<NavBar />
 			<div className="container">
 				<Routes>
-					<Route
-						path="/home"
-						element={<HomePage staffRecords={staffRecords} />}
-					/>
 					<Route
 						path="/directory"
 						element={<StaffPage staffRecords={staffRecords} />}

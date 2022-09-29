@@ -1,29 +1,25 @@
-import React from "react";
-import StaffCard from "../../components/StaffCard/StaffCard";
+import React, { useState } from "react";
 import AddStaffFields from "../../components/AddStaff/AddStaffFields";
 import "./AddStaffPage.css";
+import StaffList from "../../components/StaffList/StaffList";
+import staffRecords from "../../Staff/staffRecords.json";
 
 const AddStaffPage = (props) => {
+
+	const [staffList, setStaffList] = useState(staffRecords);
+
+
 	return (
 		<div className="add-staff-page">
 			<AddStaffFields
-				staffRecords={props.staffRecords}
+				staffRecords={staffList}
 				addStaff={props.addStaff}
 			/>
 
-			{props.staffRecords?.length > 0 ? (
-				<div className="staff-card-container">
-					{props.staffRecords.map((staffMember) => (
-						<StaffCard staff={staffMember} />
-					))}
-				</div>
-			) : (
-				<div className="empty">
-					<h2>No staff member was found</h2>
-				</div>
-			)}
+	<StaffList staffList={staffList}/>
 		</div>
 	);
 };
 
 export default AddStaffPage;
+

@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
-import StaffCard from "../../components/StaffCard/StaffCard";
+import React, { useState } from "react";
+import staffRecords from "../../Staff/staffRecords.json";
+import StaffList from "../../components/StaffList/StaffList";
 import "./RemoveStaffPage.css";
 
 const RemoveStaffPage = (props) => {
 	const [staffId, setStaffId] = useState("");
+	const [staffList] = useState(staffRecords);
 
 	return (
 		<div className="remove-staff-page">
@@ -21,18 +23,8 @@ const RemoveStaffPage = (props) => {
 					onClick={() => props.removeStaff(staffId)}
 				/>
 			</div>
-
-			{props.staffRecords?.length > 0 ? (
-				<div className="staff-card-container">
-					{props.staffRecords.map((staffMember) => (
-						<StaffCard staff={staffMember} />
-					))}
-				</div>
-			) : (
-				<div className="empty">
-					<h2>No staff member was found</h2>
-				</div>
-			)}
+			<StaffList staffList={staffList}/>
+		
 		</div>
 	);
 };
