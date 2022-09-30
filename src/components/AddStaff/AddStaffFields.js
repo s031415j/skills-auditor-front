@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./AddStaffFields.css";
+import staffRecords from "../../Staff/staffRecords.json";
 
 const AddStaffFields = (props) => {
+	const [staffList, setStaff] = useState(staffRecords);
 	const [firstNameValue, setFirstNameValue] = useState("");
 	const [surnameValue, setSurnameValue] = useState("");
 	const [jobRoleValue, setJobRoleValue] = useState("");
@@ -17,10 +19,23 @@ const AddStaffFields = (props) => {
 			phoneNumber: phoneValue,
 		};
 
-		props.addStaff(newStaffMember);
-	};
+		const newStaff = [...staffList, newStaffMember];
 
-	useEffect(() => {}, []);
+        setStaff(newStaff);
+        setFirstNameValue('');
+        setSurnameValue('');
+        setJobRoleValue('');
+        setEmailValue('');
+        setPhoneValue('');
+
+		props.addStaff(newStaffMember);
+    };
+
+		
+
+    useEffect(() => {
+
+    }, [staffList])
 
 	return (
 		<div className="add-staff-container">
@@ -64,7 +79,6 @@ const AddStaffFields = (props) => {
 					onClick={() => handleAddButtonClick()}
 				/>
 			</div>
-			<div></div>
 		</div>
 	);
 };

@@ -47,8 +47,12 @@ const StaffCard = (props) => {console.log(props)
             isEditing={isEditing}
             onChange={(value) => onChange("firstname", value)}
           />
-          <EditableField className="staff-name" value={`${props.staff.surname}`} />
-          <EditableField className="staff-name" value={`${props.staff.jobRole}`} />
+          <EditableField className="staff-name" value={`${props.staff.surname}`}
+            isEditing={isEditing}
+            onChange={(value) => onChange("surname", value)}/>
+          <EditableField className="staff-name" value={`${props.staff.jobRole}`}
+            isEditing={isEditing}
+            onChange={(value) => onChange("jobRole", value)}/>
         </div>
       </div>
 
@@ -60,7 +64,9 @@ const StaffCard = (props) => {console.log(props)
               src={`/images/email-icon.png`}
               alt="email-icon"
             />
-            <EditableField className="staff-name" value={`${props.staff.email}`} />
+            <EditableField className="staff-name" value={`${props.staff.email}`}
+            isEditing={isEditing}
+            onChange={(value) => onChange("email", value)}/>
           </div>
           <div className="phone-section">
             <img
@@ -68,7 +74,9 @@ const StaffCard = (props) => {console.log(props)
               src={`/images/phone-icon.png`}
               alt="phone-icon"
             />
-            <EditableField className="staff-name" value={`${props.staff.phoneNumber}`} />
+            <EditableField className="staff-name" value={`${props.staff.phoneNumber}`}
+            isEditing={isEditing}
+            onChange={(value) => onChange("phoneNumber", value)} />
           </div>
         </div>
         <button onClick={onSubmit}>Save</button>

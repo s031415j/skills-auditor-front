@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import StaffCard from "../../components/StaffCard/StaffCard";
 import StaffList from "../../components/StaffList/StaffList";
 import staffRecords from "../../Staff/staffRecords.json";
 import "./StaffPage.css";
