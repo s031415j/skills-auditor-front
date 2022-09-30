@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 const EditableField = ({className, value, isEditing, onChange}) => {
-    console.log(value);
 
     return(
     
     <>
-    {isEditing? <input defaultValue={value} onChange={onChange}></input> : <p className={className}>{value}</p>}
+    {isEditing? <input className="edit-field" defaultValue={value} onChange={onChange}></input> : <p className={className}>{value}</p>}
     </>
 
         

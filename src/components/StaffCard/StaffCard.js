@@ -4,7 +4,6 @@ import EditableField from "../EditableField/EditableField";
 
 const StaffCard = (props) => {console.log(props)
   const [isEditing, setIsEditing] = useState(false);
-
   const [staffToEdit, setStaffToEdit] = useState();
 
   const onEdit = () => {
@@ -26,12 +25,13 @@ const StaffCard = (props) => {console.log(props)
     <div className="staff-card" key={props.staff.id}>
       <div className="top-section">
         <div className="edit-container">
-          <img
+        {!isEditing && <img
             className="edit-icon icon"
             src={`/images/edit-icon.png`}
             alt="edit-icon"
             onClick={onEdit}
-          />
+          />}
+          
         </div>
         <div className="profile-pic">
           <img
@@ -50,7 +50,7 @@ const StaffCard = (props) => {console.log(props)
           <EditableField className="staff-name" value={`${props.staff.surname}`}
             isEditing={isEditing}
             onChange={(value) => onChange("surname", value)}/>
-          <EditableField className="staff-name" value={`${props.staff.jobRole}`}
+          <EditableField className="staff-job-role" value={`${props.staff.jobRole}`}
             isEditing={isEditing}
             onChange={(value) => onChange("jobRole", value)}/>
         </div>
@@ -64,7 +64,7 @@ const StaffCard = (props) => {console.log(props)
               src={`/images/email-icon.png`}
               alt="email-icon"
             />
-            <EditableField className="staff-name" value={`${props.staff.email}`}
+            <EditableField className="staff-email" value={`${props.staff.email}`}
             isEditing={isEditing}
             onChange={(value) => onChange("email", value)}/>
           </div>
@@ -74,12 +74,14 @@ const StaffCard = (props) => {console.log(props)
               src={`/images/phone-icon.png`}
               alt="phone-icon"
             />
-            <EditableField className="staff-name" value={`${props.staff.phoneNumber}`}
+            <EditableField className="staff-phone-number" value={`${props.staff.phoneNumber}`}
             isEditing={isEditing}
             onChange={(value) => onChange("phoneNumber", value)} />
           </div>
         </div>
-        <button onClick={onSubmit}>Save</button>
+        <>
+        {isEditing && <button onClick={onSubmit}>Save</button>}
+        </>
       </div>
     </div>
   );

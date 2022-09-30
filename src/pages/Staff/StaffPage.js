@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
 import StaffList from "../../components/StaffList/StaffList";
-import staffRecords from "../../Staff/staffRecords.json";
 import "./StaffPage.css";
 
-const StaffPage = () => {
+const StaffPage = (props) => {
   const [searchedStaff, setSearchedStaff] = useState("");
-  const [staffList, setStaff] = useState(staffRecords);
+  const [staffList, setStaff] = useState(props.staffRecords);
 
   useEffect(() => {}, [staffList]);
 
   const searchStaff = (firstname) => {
     if (!firstname) {
-      setStaff(staffRecords);
+      setStaff(staffList);
       return;
     }
 
-    const foundStaff = staffRecords.filter(
+    const foundStaff = staffList.filter(
       (record) => record.firstname === firstname
     );
     console.log("Found Staff:", foundStaff);
@@ -23,8 +22,6 @@ const StaffPage = () => {
 
     setStaff(foundStaff);
   };
-
-
 
   return (
     <div className="staff-page">
@@ -43,7 +40,7 @@ const StaffPage = () => {
         />
       </div>
 
-      <StaffList staffList={staffList}/>
+      <StaffList staffList={staffList} updateStaff={props.updateStaff} />
     </div>
   );
 };

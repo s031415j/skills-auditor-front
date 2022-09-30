@@ -8,22 +8,29 @@ import staffRecordsFromJson from "../../Staff/staffRecords.json";
 import React, { useState, useEffect } from "react";
 
 function App() {
-	const [staffRecords, setStaffRecords] = useState([]);
+	// const [staffRecords, setStaffRecords] = useState([]);
+	const [staffList, setStaffList] = useState(staffRecordsFromJson);
 
 	const addStaff = (staff) => {
-		setStaffRecords([...staffRecords, staff]);
+		setStaffList([...staffList, staff]);
 	};
 
+	const updateStaff = (index, newValue) => {
+		const staffListCopy = [...staffList];
+		staffListCopy.splice(index, 1, newValue);
+		setStaffList(staffListCopy);
+	  };
+
 	const removeStaff = (staffId) => {
-		let newStaffRecords = staffRecords.filter(function (staff) {
+		let newStaffRecords = staffList.filter((staff) => {
 			return staff.id !== staffId;
 		});
-		setStaffRecords([...newStaffRecords]);
+		setStaffList([...newStaffRecords]);
 	};
 
 	useEffect(() => {
-		console.log("app is mounted");
-		setStaffRecords(staffRecordsFromJson);
+		console.log("Staff members set");
+		setStaffList(staffRecordsFromJson);
 	}, []);
 
 	return (
@@ -33,14 +40,15 @@ function App() {
 				<Routes>
 					<Route
 						path="/directory"
-						element={<StaffPage staffRecords={staffRecords} />}
+						element={<StaffPage staffRecords={staffList} updateStaff={updateStaff} />}
 					/>
 					<Route
 						path="/addStaff"
 						element={
 							<AddStaff
-								staffRecords={staffRecords}
+								staffRecords={staffList}
 								addStaff={addStaff}
+								updateStaff={updateStaff}
 							/>
 						}
 					/>
@@ -48,8 +56,9 @@ function App() {
 						path="/removeStaff"
 						element={
 							<RemoveStaff
-								staffRecords={staffRecords}
+								staffRecords={staffList}
 								removeStaff={removeStaff}
+								updateStaff={updateStaff}
 							/>
 						}
 					/>

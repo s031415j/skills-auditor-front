@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./AddStaffFields.css";
-import staffRecords from "../../Staff/staffRecords.json";
 
 const AddStaffFields = (props) => {
-	const [staffList, setStaff] = useState(staffRecords);
+	const [staffList, setStaff] = useState(props.staffList);
 	const [firstNameValue, setFirstNameValue] = useState("");
 	const [surnameValue, setSurnameValue] = useState("");
 	const [jobRoleValue, setJobRoleValue] = useState("");
@@ -30,12 +29,6 @@ const AddStaffFields = (props) => {
 
 		props.addStaff(newStaffMember);
     };
-
-		
-
-    useEffect(() => {
-
-    }, [staffList])
 
 	return (
 		<div className="add-staff-container">

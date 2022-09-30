@@ -1,13 +1,13 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-h2{
-    margin: 5px;
+.staff-name{
+    margin: 0;
     color: #64b4ce;
     font-size: 24px;
     font-weight: bold;
 }
-h3{
+.job-role{
     margin: 5px;
     font-size: 18px;
     font-weight: 300;
@@ -15,6 +15,17 @@ h3{
 p{
     margin: 0;
     padding: 6px 10px;
+}
+button{
+    height: 30px;
+    width: 50px;
+    margin: 0 0 20px 0;
+    float: right;
+    border-color: #64b4ce;
+    background-color: #64b4ce;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 14px;
 }
 .icon{
     height: 20px;
