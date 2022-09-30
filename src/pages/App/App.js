@@ -16,10 +16,12 @@ function App() {
 	};
 
 	const updateStaff = (index, newValue) => {
+		console.log("index", index);
+		console.log("newValue", newValue);
 		const staffListCopy = [...staffList];
 		staffListCopy.splice(index, 1, newValue);
 		setStaffList(staffListCopy);
-	  };
+	};
 
 	const removeStaff = (staffId) => {
 		let newStaffRecords = staffList.filter((staff) => {
@@ -40,7 +42,12 @@ function App() {
 				<Routes>
 					<Route
 						path="/directory"
-						element={<StaffPage staffRecords={staffList} updateStaff={updateStaff} />}
+						element={
+							<StaffPage
+								staffRecords={staffList}
+								updateStaff={updateStaff}
+							/>
+						}
 					/>
 					<Route
 						path="/addStaff"
@@ -56,7 +63,7 @@ function App() {
 						path="/removeStaff"
 						element={
 							<RemoveStaff
-								staffRecords={staffList}
+								staffList={staffList}
 								removeStaff={removeStaff}
 								updateStaff={updateStaff}
 							/>

@@ -4,7 +4,6 @@ import "./RemoveStaffPage.css";
 
 const RemoveStaffPage = (props) => {
 	const [staffId, setStaffId] = useState("");
-	const [staffList] = useState(props.staffList);
 
 	return (
 		<div className="remove-staff-page">
@@ -22,8 +21,10 @@ const RemoveStaffPage = (props) => {
 					onClick={() => props.removeStaff(staffId)}
 				/>
 			</div>
-			<StaffList staffList={staffList} updateStaff={props.updateStaff}/>
-		
+			<StaffList
+				staffList={props.staffList}
+				updateStaff={props.updateStaff}
+			/>
 		</div>
 	);
 };

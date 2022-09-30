@@ -10,7 +10,7 @@ const StaffPage = (props) => {
 
   const searchStaff = (firstname) => {
     if (!firstname) {
-      setStaff(staffList);
+      setStaff(props.staffRecords);
       return;
     }
 

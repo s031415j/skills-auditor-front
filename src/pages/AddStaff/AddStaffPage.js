@@ -4,22 +4,19 @@ import "./AddStaffPage.css";
 import StaffList from "../../components/StaffList/StaffList";
 
 const AddStaffPage = (props) => {
-
-	const [staffList, setStaffList] = useState(props.staffRecords);
-    useEffect(() => {setStaffList(staffList)}, [staffList])
-	
 	return (
 		<div className="add-staff-page">
-			<AddStaffFields 
-				staffRecords={staffList}
+			<AddStaffFields
+				staffList={props.staffRecords}
 				addStaff={props.addStaff}
 			/>
 
-			<StaffList staffList={staffList} updateStaff={props.updateStaff}/>
-
+			<StaffList
+				staffList={props.staffRecords}
+				updateStaff={props.updateStaff}
+			/>
 		</div>
 	);
 };
 
 export default AddStaffPage;
-
