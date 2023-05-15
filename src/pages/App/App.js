@@ -1,7 +1,7 @@
 import "./App.css";
 import StaffPage from "../Staff/StaffPage";
 import NavBar from "../NavBar/NavBar";
-import AddStaff from "../AddStaff/AddStaffPage";
+import AddStaffPage from "../AddStaff/AddStaffPage";
 import RemoveStaff from "../RemoveStaff/RemoveStaffPage";
 import { Routes, Route } from "react-router-dom";
 import staffRecordsFromJson from "../../Staff/staffRecords.json";
@@ -16,8 +16,6 @@ function App() {
 	};
 
 	const updateStaff = (index, newValue) => {
-		console.log("index", index);
-		console.log("newValue", newValue);
 		const staffListCopy = [...staffList];
 		staffListCopy.splice(index, 1, newValue);
 		setStaffList(staffListCopy);
@@ -52,7 +50,7 @@ function App() {
 					<Route
 						path="/addStaff"
 						element={
-							<AddStaff
+							<AddStaffPage
 								staffRecords={staffList}
 								addStaff={addStaff}
 								updateStaff={updateStaff}
@@ -62,7 +60,7 @@ function App() {
 					<Route
 						path="/removeStaff"
 						element={
-							<RemoveStaff
+							<RemoveStaff 
 								staffList={staffList}
 								removeStaff={removeStaff}
 								updateStaff={updateStaff}

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import StaffCard from "../../components/StaffCard/StaffCard";
+import React from "react";
+import StaffCard from "../StaffCard/StaffCard";
 
 const StaffList = (props) => {
 

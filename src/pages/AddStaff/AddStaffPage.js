@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import AddStaffFields from "../../components/AddStaff/AddStaffFields";
 import "./AddStaffPage.css";
 import StaffList from "../../components/StaffList/StaffList";
